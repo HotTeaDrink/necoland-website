@@ -10,7 +10,7 @@ logs
 
 node_modules
 bower_components
-.env.sample
+.env
 TODO.txt
 
 .sublime
