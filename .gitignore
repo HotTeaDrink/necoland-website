@@ -3,15 +3,17 @@
 
 ### react ###
 .DS_*
-*.log
+.log
 logs
-**/*.backup.*
-**/*.back.*
+**/.backup.*
+*/.back.*
 
 node_modules
 bower_components
+.env.sample
+TODO.txt
 
-*.sublime*
+.sublime
 
 psd
 thumb

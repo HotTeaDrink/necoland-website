@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../App.css";
 import { Button } from "./Button";
 import "./HomeSection.css";
 
 function HomeSection() {
   document.body.style.overflow = "hidden";
+
+  const [user, setUser] = useState([]);
+
+  const fetchData = () => {
+    return fetch("/api/sounds")
+          .then((response) => response.json())
+          .then((data) => setUser(data));
+  }
+
+    useEffect(() => {
+      fetchData();
+    },[])
+
+    user.map((userObj, index) => (console.log(userObj)))
 
   let randNumMin = 1;
   let randNumMax = 2;
